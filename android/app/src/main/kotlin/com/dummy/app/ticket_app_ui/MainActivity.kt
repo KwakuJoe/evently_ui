@@ -1,0 +1,5 @@
+package com.dummy.app.ticket_app_ui
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity: FlutterActivity()
