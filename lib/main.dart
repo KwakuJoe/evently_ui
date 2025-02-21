@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:ticket_app_ui/core/auth_middleware.dart';
-import 'package:ticket_app_ui/core/auth_service.dart';
+// import 'package:ticket_app_ui/core/auth_middleware.dart';
+// import 'package:ticket_app_ui/core/auth_service.dart';
 import 'package:ticket_app_ui/core/base_dependency_injection.dart';
 import 'package:ticket_app_ui/presentation/pages/auth/reset_password.dart';
 import 'package:ticket_app_ui/presentation/pages/auth/forgot_password.dart';
@@ -32,13 +32,13 @@ void main() async {
   await GetStorage.init(); // Initialize GetStorage if used
 
   // Initialize AuthService
-  final authService = AuthService();
+  // final authService = AuthService();
 
   // Determine the initial route based on authentication state
-  final initialRoute = authService.isAuthenticated() ? '/home-view' : '/login';
+  // final initialRoute = authService.isAuthenticated() ? '/home-view' : '/login';
 
-  runApp(MyApp(
-    initialRoute: initialRoute,
+  runApp(const MyApp(
+    initialRoute: '/login',
   ));
 }
 
@@ -65,7 +65,7 @@ class MyApp extends StatelessWidget {
               name: '/onboarding',
               page: () => const OnboardingScreen(),
               transition: Transition.cupertino,
-              middlewares: [AuthMiddleware()],
+              // middlewares: [AuthMiddleware()],
             ),
             GetPage(
               name: '/login',
@@ -81,73 +81,73 @@ class MyApp extends StatelessWidget {
               name: '/personalize',
               page: () => const PersonalizeScreen(),
               transition: Transition.cupertino,
-              middlewares: [AuthMiddleware()],
+              // middlewares: [AuthMiddleware()],
             ),
             GetPage(
               name: '/home-view',
               page: () => const HomeView(),
               transition: Transition.cupertino,
-              middlewares: [AuthMiddleware()],
+              // middlewares: [AuthMiddleware()],
             ),
             GetPage(
               name: '/explore',
               page: () => const ExploreScreen(),
               transition: Transition.cupertino,
-              middlewares: [AuthMiddleware()],
+              // middlewares: [AuthMiddleware()],
             ),
             GetPage(
               name: '/event-detail',
               page: () => const EventDetailsScreen(),
               transition: Transition.cupertino,
-              middlewares: [AuthMiddleware()],
+              // middlewares: [AuthMiddleware()],
             ),
             GetPage(
               name: '/select-session',
               page: () => const SelectSession(),
               transition: Transition.cupertino,
-              middlewares: [AuthMiddleware()],
+              // middlewares: [AuthMiddleware()],
             ),
             GetPage(
               name: '/event-checkout',
               page: () => EventCheckout(),
               transition: Transition.cupertino,
-              middlewares: [AuthMiddleware()],
+              // middlewares: [AuthMiddleware()],
             ),
             GetPage(
               name: '/checkout-successful',
               page: () => CheckoutSuccessFull(),
               transition: Transition.cupertino,
-              middlewares: [AuthMiddleware()],
+              // middlewares: [AuthMiddleware()],
             ),
             GetPage(
               name: '/ticket',
               page: () => TicketScreen(),
               transition: Transition.cupertino,
-              middlewares: [AuthMiddleware()],
+              // middlewares: [AuthMiddleware()],
             ),
             GetPage(
               name: '/ticket-cancellation',
               page: () => const TicketCancellationScreen(),
               transition: Transition.cupertino,
-              middlewares: [AuthMiddleware()],
+              // middlewares: [AuthMiddleware()],
             ),
             GetPage(
               name: '/profile',
               page: () => ProfileScreen(),
               transition: Transition.cupertino,
-              middlewares: [AuthMiddleware()],
+              // middlewares: [AuthMiddleware()],
             ),
             GetPage(
               name: '/update-profile',
               page: () => const UpdateUserProfile(),
               transition: Transition.cupertino,
-              middlewares: [AuthMiddleware()],
+              // middlewares: [AuthMiddleware()],
             ),
             GetPage(
               name: '/change-password',
               page: () => const ChangePassword(),
               transition: Transition.cupertino,
-              middlewares: [AuthMiddleware()],
+              // middlewares: [AuthMiddleware()],
             ),
             GetPage(
               name: '/forget-password',
